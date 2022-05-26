@@ -1,4 +1,5 @@
 ﻿using EmplymentManagement.Models;
+using EmplymentManagement.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -19,10 +20,17 @@ namespace EmplymentManagement.Controllers
         {
             return _employeeRepository.GetEmployee(1).Name;
         }
-        public JsonResult Details()
+        public ViewResult Details()
         {
-            Employee model = _employeeRepository.GetEmployee(1);
-            return Json(model);
+            // Instantiate HomeDetailsViewModel and store Employee details and PageTitle
+            HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
+            {
+                Employee = _employeeRepository.GetEmployee(1),
+                PageTitle = "Employee Details"
+            };
+
+            // Pass the ViewModel object to the View() helper method
+            return View(homeDetailsViewModel);
         }
     }
 }
