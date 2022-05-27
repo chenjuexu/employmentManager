@@ -1,4 +1,5 @@
 ﻿using EmplymentManagement.Models;
+using EmplymentManagement.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace EmplymentManagement.Controllers
 {
+    
     public class HomeController : Controller
     {
         private readonly IEmployeeRepository _employeeRepository;
@@ -15,14 +17,31 @@ namespace EmplymentManagement.Controllers
         {
             _employeeRepository = employeeRepository;
         }
-        public string Index()
+
+        
+        public ViewResult Index()
         {
-            return _employeeRepository.GetEmployee(1).Name;
+            // retrieve all the employees
+            var model = _employeeRepository.GetAllEmployees();
+            // Pass the list of employees to the view
+            return View(model);
         }
-        public JsonResult Details()
+         
+    // ? makes id method parameter nullable
+    public ViewResult Details(int? id)
+    {
+        HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
         {
-            Employee model = _employeeRepository.GetEmployee(1);
-            return Json(model);
+            // If "id" is null use 1, else use the value passed from the route
+            Employee = _employeeRepository.GetEmployee(id ?? 1),
+            PageTitle = "Employee Details"
+        };
+
+        return View(homeDetailsViewModel);
+    }
+        public ViewResult Create()
+        {
+            return View();
         }
     }
 }
