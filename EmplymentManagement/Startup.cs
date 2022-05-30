@@ -6,6 +6,7 @@ using EmplymentManagement.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -22,8 +23,10 @@ namespace EmplymentManagement
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
-            services.AddSingleton<IEmployeeRepository, MockEmployeeRepository>();
+            services.AddDbContextPool<AppDbContext>(
+    options => options.UseSqlServer(_config.GetConnectionString("EmployeeDBConnection")));
+            services.AddMvc().AddXmlSerializerFormatters();
+            services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,8 +38,12 @@ namespace EmplymentManagement
             }
 
             app.UseStaticFiles();
-
-            app.UseMvcWithDefaultRoute();
+            //app.UseMvc();
+            //app.UseMvcWithDefaultRoute();
+             app.UseMvc(routes =>
+            {
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });
 
             app.Run(async (context) =>
             {
