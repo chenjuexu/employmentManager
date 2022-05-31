@@ -26,3 +26,4 @@ E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\V
 E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
 E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
 E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Home\Create.g.cshtml.cs
+E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Home\Edit.g.cshtml.cs
