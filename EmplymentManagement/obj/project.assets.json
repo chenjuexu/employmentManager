@@ -12093,11 +12093,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\2017t\\EmplymentManagement\\EmplymentManagement\\EmplymentManagement.csproj",
+      "projectUniqueName": "E:\\2017t\\employmentManager-File-upload-53.4\\employmentManager-File-upload-53.4\\EmplymentManagement\\EmplymentManagement.csproj",
       "projectName": "EmplymentManagement",
-      "projectPath": "E:\\2017t\\EmplymentManagement\\EmplymentManagement\\EmplymentManagement.csproj",
+      "projectPath": "E:\\2017t\\employmentManager-File-upload-53.4\\employmentManager-File-upload-53.4\\EmplymentManagement\\EmplymentManagement.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\2017t\\EmplymentManagement\\EmplymentManagement\\obj\\",
+      "outputPath": "E:\\2017t\\employmentManager-File-upload-53.4\\employmentManager-File-upload-53.4\\EmplymentManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
