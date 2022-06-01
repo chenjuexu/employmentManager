@@ -20,7 +20,7 @@ namespace EmployeeManagement.Controllers
 
         public HomeController(IEmployeeRepository employeeRepository,
                               IHostingEnvironment hostingEnvironment,
-                              ILogger logger)
+                              ILogger<HomeController> logger)
         {
 
                      _employeeRepository = employeeRepository;
