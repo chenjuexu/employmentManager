@@ -36,7 +36,10 @@ namespace EmplymentManagement
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            else
+            {
+                app.UseStatusCodePagesWithRedirects("/Error/{0}");
+            }
             app.UseStaticFiles();
             //app.UseMvc();
             //app.UseMvcWithDefaultRoute();
@@ -47,7 +50,7 @@ namespace EmplymentManagement
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+               await context.Response.WriteAsync("Hello World!");
             });
         }
     }
