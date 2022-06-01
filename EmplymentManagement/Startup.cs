@@ -38,7 +38,9 @@ namespace EmplymentManagement
             }
             else
             {
-                app.UseStatusCodePagesWithRedirects("/Error/{0}");
+                app.UseExceptionHandler("/Error");
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
+               // app.UseStatusCodePages();
             }
             app.UseStaticFiles();
             //app.UseMvc();
@@ -48,10 +50,10 @@ namespace EmplymentManagement
                 routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
 
-            app.Run(async (context) =>
-            {
-               await context.Response.WriteAsync("Hello World!");
-            });
+           // app.Run(async (context) =>
+            //{
+              // await context.Response.WriteAsync("Hello World!");
+           // });
         }
     }
 }
