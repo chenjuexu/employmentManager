@@ -23,8 +23,13 @@ using EmplymentManagement.ViewModels;
 
 #line default
 #line hidden
+#line 3 "E:\2017t\EmplymentManagement\EmplymentManagement\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2601e21bda51a3629cc9c2fd5b20e22d24e49c8e", @"/Views/Shared/NotFound.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9800b1e9cf1569e0a0ccfd671e441b8c27444d32", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2866174456df2e621ea6a8ebdb4ce5348b39ace2", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_NotFound : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -71,7 +76,7 @@ Write(ViewBag.ErrorMessage);
             WriteLiteral("</h1>\r\n\r\n");
             EndContext();
             BeginContext(77, 95, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2601e21bda51a3629cc9c2fd5b20e22d24e49c8e4310", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2601e21bda51a3629cc9c2fd5b20e22d24e49c8e4465", async() => {
                 BeginContext(121, 47, true);
                 WriteLiteral("\r\n    Click here to navigate to the home page\r\n");
                 EndContext();

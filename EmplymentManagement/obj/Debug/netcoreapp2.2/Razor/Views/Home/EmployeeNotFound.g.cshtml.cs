@@ -23,8 +23,13 @@ using EmplymentManagement.ViewModels;
 
 #line default
 #line hidden
+#line 3 "E:\2017t\EmplymentManagement\EmplymentManagement\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7f93b212e0d4065c4caf56acdd81131f73b496cb", @"/Views/Home/EmployeeNotFound.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9800b1e9cf1569e0a0ccfd671e441b8c27444d32", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2866174456df2e621ea6a8ebdb4ce5348b39ace2", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_EmployeeNotFound : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<int>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -76,7 +81,7 @@ using EmplymentManagement.ViewModels;
             WriteLiteral(" cannot be found\r\n    </h5>\r\n</div>\r\n\r\n");
             EndContext();
             BeginContext(231, 146, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7f93b212e0d4065c4caf56acdd81131f73b496cb5358", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7f93b212e0d4065c4caf56acdd81131f73b496cb5513", async() => {
                 BeginContext(330, 43, true);
                 WriteLiteral("Click here to see the list of all employees");
                 EndContext();
