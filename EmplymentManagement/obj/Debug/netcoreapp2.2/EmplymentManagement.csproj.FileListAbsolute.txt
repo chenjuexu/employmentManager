@@ -60,3 +60,4 @@ E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Emplyme
 E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Shared\NotFound.g.cshtml.cs
 E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
 E:\2017t\EmplymentManagement\EmplymentManagement\bin\Debug\netcoreapp2.2\nlog.config
+E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
