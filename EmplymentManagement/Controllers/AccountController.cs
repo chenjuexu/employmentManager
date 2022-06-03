@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EmplymentManagement.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,12 +29,15 @@ namespace EmplymentManagement.Controllers
             return RedirectToAction("index", "home");
         }
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
+        [AllowAnonymous]
+
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
@@ -68,6 +72,7 @@ namespace EmplymentManagement.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
@@ -75,8 +80,10 @@ namespace EmplymentManagement.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        [AllowAnonymous]
+        public async Task<IActionResult> Login(LoginViewModel model,string returnUrl)
         {
+
             if (ModelState.IsValid)
             {
                 var result = await signInManager.PasswordSignInAsync(
@@ -84,7 +91,15 @@ namespace EmplymentManagement.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("index", "home");
+
+                    if (!string.IsNullOrEmpty(returnUrl))
+                    {
+                        return Redirect(returnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("index", "home");
+                    }
                 }
 
                 ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
