@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagement.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly IEmployeeRepository _employeeRepository;
@@ -28,6 +29,7 @@ namespace EmployeeManagement.Controllers
             this.hostingEnvironment = hostingEnvironment;
             this.logger = logger;
         }
+        [AllowAnonymous]
         public ViewResult Index()
         {
             // retrieve all the employees
@@ -37,6 +39,7 @@ namespace EmployeeManagement.Controllers
         }
 
         // ? makes id method parameter nullable
+        [AllowAnonymous]
         public ViewResult Details(int? id)
         {
             //throw new Exception("Error in Details View");
@@ -63,13 +66,13 @@ namespace EmployeeManagement.Controllers
             return View(homeDetailsViewModel);
         }
         [HttpGet]
-        [Authorize]
+       
         public ViewResult Create()
         {
             return View();
         }
         [HttpGet]
-        [Authorize]
+        
         public ViewResult Edit(int id)
         {
             Employee employee = _employeeRepository.GetEmployee(id);
@@ -84,7 +87,7 @@ namespace EmployeeManagement.Controllers
             return View(employeeEditViewModel);
         }
         [HttpPost]
-        [Authorize]
+       
         public IActionResult Edit(EmployeeEditViewModel model)
         {
             if (ModelState.IsValid)
@@ -140,7 +143,6 @@ namespace EmployeeManagement.Controllers
         }
 
         [HttpPost]
-        [Authorize]
         public IActionResult Create(EmployeeCreateViewModel model)
         {
             if (ModelState.IsValid)
