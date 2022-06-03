@@ -28,7 +28,7 @@ namespace EmplymentManagement
         {
             services.AddDbContextPool<AppDbContext>(
     options => options.UseSqlServer(_config.GetConnectionString("EmployeeDBConnection")));
-            services.AddIdentity<IdentityUser, IdentityRole>
+            services.AddIdentity<ApplicationUser, IdentityRole>
                 (options =>
                 {
                     options.Password.RequiredLength = 10;
