@@ -64,7 +64,8 @@ namespace EmplymentManagement.Controllers
                 var user = new ApplicationUser
                 {
                     UserName = model.Email,
-                    Email = model.Email
+                    Email = model.Email,
+                    City = model.City
                 };
 
                 // Store user data in AspNetUsers database table

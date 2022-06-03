@@ -6,6 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20220603182515_Extend_IdentityUser.cs" />
+    <Compile Remove="Migrations\20220603182515_Extend_IdentityUser.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="nlog.config" />
   </ItemGroup>
 
