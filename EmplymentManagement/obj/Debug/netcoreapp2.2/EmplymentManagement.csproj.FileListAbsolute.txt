@@ -64,3 +64,4 @@ E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\V
 E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
 E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Login.g.cshtml.cs
 E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Administration\CreateRole.g.cshtml.cs
+E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Administration\ListRoles.g.cshtml.cs
