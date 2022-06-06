@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace EmplymentManagement.Controllers
 {
-    [Authorize(Roles = "Administrator")]
-    [Authorize(Roles = "User")]
+    [Authorize(Roles = "Admin")]
+   // [Authorize(Roles = "User")]
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
