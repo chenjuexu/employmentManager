@@ -69,3 +69,4 @@ E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\V
 E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Administration\EditUsersInRole.g.cshtml.cs
 E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Account\AccessDenied.g.cshtml.cs
 E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Administration\ListUsers.g.cshtml.cs
+E:\2017t\EmplymentManagement\EmplymentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Administration\EditUser.g.cshtml.cs
