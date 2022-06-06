@@ -1,5 +1,6 @@
 ﻿using EmplymentManagement.Models;
 using EmplymentManagement.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -9,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace EmplymentManagement.Controllers
 {
+    [Authorize(Roles = "Administrator")]
+    [Authorize(Roles = "User")]
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
