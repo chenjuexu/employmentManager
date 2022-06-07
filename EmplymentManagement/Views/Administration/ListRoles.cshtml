@@ -9,7 +9,7 @@
 @if (Model.Any())
 {
     <a class="btn btn-primary mb-3" style="width:auto" asp-action="CreateRole"
-       asp-controller="administration" >Add new role</a>
+       asp-controller="administration">Add new role</a>
 
     foreach (var role in Model)
     {
@@ -23,7 +23,17 @@
             <div class="card-footer">
                 <a asp-controller="Administration" asp-action="EditRole"
                    asp-route-id="@role.Id" class="btn btn-primary">Edit</a>
-                <a href="#" class="btn btn-danger">Delete</a>
+                <span id="confirmDeleteSpan_@role.Id" style="display:none">
+                    <span>Are you sure you want to delete?</span>
+                    <button type="submit" class="btn btn-danger">Yes</button>
+                    <a href="#" class="btn btn-primary"
+                       onclick="confirmDelete('@role.Id', false)">No</a>
+                </span>
+
+                <span id="deleteSpan_@role.Id">
+                    <a href="#" class="btn btn-danger"
+                       onclick="confirmDelete('@role.Id', true)">Delete</a>
+                </span>
             </div>
         </div>
     }
@@ -44,4 +54,10 @@ else
             </a>
         </div>
     </div>
+}
+
+
+
+@section Scripts {
+    <script src="~/js/CustomScript.js"></script>
 }
