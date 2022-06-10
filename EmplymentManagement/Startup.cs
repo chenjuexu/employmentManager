@@ -61,7 +61,7 @@ namespace EmplymentManagement
 
                     );
                 options.AddPolicy("EditRolePolicy",
-                    policy => policy.RequireClaim("Edit Role")
+                    policy => policy.RequireClaim("Edit Role","true")
                                     
 
 
