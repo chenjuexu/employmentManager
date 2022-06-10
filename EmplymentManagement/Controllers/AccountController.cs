@@ -23,6 +23,13 @@ namespace EmplymentManagement.Controllers
             this.userManager = userManager;
             this.signInManager = signInManager;
         }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
         [HttpPost]
         public async Task<IActionResult> Logout()
         {
@@ -132,12 +139,7 @@ namespace EmplymentManagement.Controllers
             return View(model);
         }
 
-        [HttpGet]
-        [AllowAnonymous]
-        public IActionResult AccessDenied()
-        {
-            return View();
-        }
+        
     }
 
 }
