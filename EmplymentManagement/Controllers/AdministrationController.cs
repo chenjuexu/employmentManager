@@ -13,7 +13,7 @@ using System.Security.Claims;
 
 namespace EmplymentManagement.Controllers
 {
-    [Authorize(Policy = "AdminRolePolicy")]
+    //[Authorize(Policy = "AdminRolePolicy")]
    // [Authorize(Roles = "User")]
     public class AdministrationController : Controller
     {
