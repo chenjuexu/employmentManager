@@ -13,7 +13,7 @@ using System.Security.Claims;
 
 namespace EmplymentManagement.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Policy = "AdminRolePolicy")]
    // [Authorize(Roles = "User")]
     public class AdministrationController : Controller
     {
@@ -286,6 +286,7 @@ namespace EmplymentManagement.Controllers
             return View(roles);
         }
         [HttpGet]
+        [Authorize(Policy = "EditRolePolicy")]
         public async Task<IActionResult> EditRole(string id)
         {
             // Find the role by Role ID
