@@ -144,6 +144,7 @@ namespace EmplymentManagement.Controllers
         }
         [HttpPost]
         [Authorize(Policy = "EditRolePolicy")]
+
         public async Task<IActionResult>
     ManageUserRoles(List<UserRolesViewModel> model, string userId)
         {
