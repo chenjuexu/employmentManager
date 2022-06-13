@@ -48,6 +48,12 @@ namespace EmplymentManagement
                                 .Build();
                 config.Filters.Add(new AuthorizeFilter(policy));
             }).AddXmlSerializerFormatters();
+
+            services.AddAuthentication().AddGoogle(options =>
+            {
+                options.ClientId = "265881039597-rotbh5f9br5ko26h08kl7ofqn9iphl55.apps.googleusercontent.com";
+                options.ClientSecret = "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";
+            });
             services.ConfigureApplicationCookie(options =>
             {
                 options.AccessDeniedPath = new PathString("/Administration/AccessDenied");
@@ -63,7 +69,8 @@ namespace EmplymentManagement
                     );
             options.AddPolicy("EditRolePolicy", policy =>
         policy.AddRequirements(new ManageAdminRolesAndClaimsRequirement()));
-    
+              
+
 
                 options.AddPolicy("AdminRolePolicy", policy => policy.RequireRole("Admin"));
             });
