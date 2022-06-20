@@ -117,6 +117,7 @@ namespace EmplymentManagement.Controllers
         }
 
 
+
         [HttpPost]
         [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel model,string returnUrl)
@@ -145,17 +146,16 @@ namespace EmplymentManagement.Controllers
 
             return View(model);
         }
+
         [AllowAnonymous]
         [HttpPost]
         public IActionResult ExternalLogin(string provider, string returnUrl)
         {
             var redirectUrl = Url.Action("ExternalLoginCallback", "Account",
-                                new { ReturnUrl = returnUrl });
-            var properties = signInManager
-                .ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+                               new { ReturnUrl = returnUrl });
+            var properties = signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
             return new ChallengeResult(provider, properties);
         }
-
     }
 
 }

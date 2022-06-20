@@ -12205,11 +12205,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\2017t\\EmplymentManagement\\EmplymentManagement\\EmplymentManagement.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\employmentManager-Multiple-custom-authorization-handlers-102.1\\EmplymentManagement\\EmplymentManagement.csproj",
       "projectName": "EmplymentManagement",
-      "projectPath": "E:\\2017t\\EmplymentManagement\\EmplymentManagement\\EmplymentManagement.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Downloads\\employmentManager-Multiple-custom-authorization-handlers-102.1\\EmplymentManagement\\EmplymentManagement.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\2017t\\EmplymentManagement\\EmplymentManagement\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Downloads\\employmentManager-Multiple-custom-authorization-handlers-102.1\\EmplymentManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
