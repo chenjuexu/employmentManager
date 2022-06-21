@@ -50,9 +50,13 @@ namespace EmplymentManagement
             }).AddXmlSerializerFormatters();
             services.AddAuthentication().AddGoogle(options =>
             {
-                 options.ClientId = "265881039597-rotbh5f9br5ko26h08kl7ofqn9iphl55.apps.googleusercontent.com";
+                IConfigurationSection googleAuthNSection = _config.GetSection("Authentication:Google");
+                options.ClientId = "265881039597-rotbh5f9br5ko26h08kl7ofqn9iphl55.apps.googleusercontent.com";
               options.ClientSecret = "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";
-              options.UserInformationEndpoint = "https://www.googleapis.com/oauth2/v1/certs";
+
+                options.UserInformationEndpoint = "https://www.googleapis.com/oauth2/v1/certs";
+               
+
             });
             services.ConfigureApplicationCookie(options =>
             {
